@@ -9,6 +9,8 @@
     android:background="#000"
     tools:context=".Home">
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,6 +31,101 @@
                 android:drawablePadding="6dp"
                 android:text="Walcome \nMy User"/>
 
+            <android.widget.HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:layout_marginTop="20dp"
+                android:scrollbars="horizontal">
+
+                <!-- LinearLayout Horizontal untuk konten dalam ScrollView -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="10dp">
+
+                    <!-- Item pertama dalam HorizontalScrollView -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Kartun"
+                        android:background="@drawable/bg_menu"
+                        android:padding="4dp"
+                        android:textColor="#EEEEEE"
+                        android:layout_marginEnd="8dp"
+                        android:textSize="19sp" />
+
+                    <!-- Item kedua dalam HorizontalScrollView -->
+
+                    <!-- Item ketiga dalam HorizontalScrollView -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:text="Action"
+                        android:background="@drawable/bg_menu"
+                        android:padding="4dp"
+                        android:textColor="#fff"
+                        android:textSize="19sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:text="Drama"
+                        android:background="@drawable/bg_menu"
+                        android:padding="4dp"
+                        android:textColor="#fff"
+                        android:textSize="19sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:text="Fantasy"
+                        android:background="@drawable/bg_menu"
+                        android:padding="4dp"
+                        android:textColor="#fff"
+                        android:textSize="19sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:text="Horor"
+                        android:background="@drawable/bg_menu"
+                        android:padding="4dp"
+                        android:textColor="#fff"
+                        android:textSize="19sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_menu"
+                        android:padding="4dp"
+                        android:text="Petualangan"
+                        android:textColor="#fff"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Anime"
+                        android:background="@drawable/bg_menu"
+                        android:padding="4dp"
+                        android:textColor="#fff"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="19sp" />
+
+                    <!-- Tambahkan lebih banyak item sesuai kebutuhan -->
+                </LinearLayout>
+            </android.widget.HorizontalScrollView>
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -46,25 +143,81 @@
                 android:layout_height="200dp"
                 android:layout_marginTop="15dp"
                 android:src="@drawable/spiderman"/>
-            <ScrollView
+
+<!--            scrollview-->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:scrollbars="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Popular Movies"
-                    android:textSize="20sp"
-                    android:textColor="#fff"/>
-            </ScrollView>
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scrollbars="horizontal"
-                android:layout_marginTop="20dp">
+                    android:textColor="#fff"
+                    android:textSize="19dp"/>
+            </LinearLayout>
 
-            </androidx.recyclerview.widget.RecyclerView>
+<!--            scrollView vertikal-->
+            <android.widget.ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+                <!-- LinearLayout di dalam ScrollView untuk konten -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Contoh konten dalam ScrollView -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Movies"
+                        android:textColor="#fff"
+                        android:textSize="18sp"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reciclerView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="horizontal"
+                        android:layout_marginTop="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="China"
+                        android:textColor="#fff"
+                        android:textSize="18sp"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reciclerView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="horizontal"
+                        android:layout_marginTop="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Boliwud"
+                        android:textColor="#fff"
+                        android:textSize="18sp"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reciclerView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="horizontal"
+                        android:layout_marginTop="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+<!--                    isi konten scroll vertikal-->
+                </LinearLayout>
+
+            </android.widget.ScrollView>
+<!--            end scrollview vertikal-->
         </LinearLayout>
 
 <!--        navigasi bawah-->

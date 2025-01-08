@@ -59,13 +59,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/btn_gray"
-                android:text="Regist"
+                android:text="Continue with Google"
+                android:drawableLeft="@drawable/google"
+                android:drawablePadding="6dp"
+                android:padding="9dp"
                 android:layout_marginTop="20dp"
                 android:textColor="#fff"
                 android:textStyle="bold"
                 android:textSize="20sp">
 
             </androidx.appcompat.widget.AppCompatButton>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:textSize="15dp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create new Account"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                />
 
         </LinearLayout>
 
