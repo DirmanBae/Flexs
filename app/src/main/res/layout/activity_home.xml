@@ -138,11 +138,35 @@
                     android:padding="6dp"
                     android:drawableLeft="@drawable/search"
                     android:hint="Cari...."/>
-            <ImageView
+
+            <ViewFlipper
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/spiderman"/>
+                android:flipInterval="2000"
+                android:autoStart="true"
+                android:inAnimation="@android:anim/slide_in_left"
+                android:outAnimation="@android:anim/slide_out_right">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/spiderman"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/avengers_landscap"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/guardian"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/iron_man_3"/>
+            </ViewFlipper>
 
 <!--            scrollview-->
             <LinearLayout
