@@ -2,9 +2,11 @@ package com.example.flexs;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -23,9 +25,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView judul = findViewById(R.id.judul);
         Button btnLogin = findViewById(R.id.btnLogin);
+        TextView btnRegist = findViewById(R.id.btnRegist);
+        Button btnGoogle = findViewById(R.id.btnGoogle);
+
+        btnGoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/"));
+                startActivity(intent);
+            }
+        });
+
+        btnRegist.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, regist.class);
+            startActivity(i);
+        });
 
         btnLogin.setOnClickListener(v -> {
-            Intent i = new Intent(MainActivity.this, Home.class);
+            Intent i = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(i);
         });
 

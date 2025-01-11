@@ -55,7 +55,7 @@
             </androidx.appcompat.widget.AppCompatButton>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnRegist"
+                android:id="@+id/btnGoogle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/btn_gray"
@@ -78,6 +78,7 @@
                 android:gravity="center"
                 android:layout_marginTop="10dp"/>
             <TextView
+                android:id="@+id/btnRegist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Create new Account"
