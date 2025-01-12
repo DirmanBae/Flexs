@@ -27,12 +27,14 @@ public class Home extends AppCompatActivity {
         Intent intent = getIntent();
         String isi = intent.getStringExtra("nama");
         TextView judul = findViewById(R.id.judul);
-        judul.setText("Welcom\n"+isi);
+        judul.setText("Welcome\n"+isi);
 
         recyclerView = findViewById(R.id.reciclerView1);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        customModelArrayList.add(new CustomModel(R.drawable.drstrange, "Doctor Strange","Action, Adventure"));
+        String getData = getString(R.string.drStrange);
+
+        customModelArrayList.add(new CustomModel(R.drawable.drstrange, "Doctor Strange",getData));
         customModelArrayList.add(new CustomModel(R.drawable.moana, "Moana","Animation, Coming of Age"));
         customModelArrayList.add(new CustomModel(R.drawable.captenamerica, "Captain America","Action, Adventure"));
         customModelArrayList.add(new CustomModel(R.drawable.captenmarvel, "Captain Marvel","Action, Adventure"));

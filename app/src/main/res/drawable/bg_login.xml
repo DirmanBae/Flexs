@@ -3,6 +3,6 @@
     <solid android:color="#D33A3939" /> <!-- Latar belakang transparan -->
     <stroke
         android:width="2dp"
-        android:color="#FF5722" /> <!-- Warna outline -->
+        android:color="#FBFBFB" /> <!-- Warna outline -->
     <corners android:radius="9dp" /> <!-- Radius untuk sudut melengkung -->
 </shape>
